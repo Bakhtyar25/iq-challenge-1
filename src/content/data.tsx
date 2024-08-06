@@ -4,6 +4,7 @@ import Facebook from "./svg/Facebook";
 import Instagram from "./svg/Instagram";
 import Pinterest from "./svg/Pinterest";
 
+// Array of social media objects, each with a name and corresponding icon component.
 export const social: Social[] = [
   {
     name: "Facebook",
@@ -19,6 +20,7 @@ export const social: Social[] = [
   },
 ];
 
+// Animation variants for flipping top element.
 export const flipTopVariants: Variants = {
   initial: {
     zIndex: -10,
@@ -37,6 +39,7 @@ export const flipTopVariants: Variants = {
   },
 };
 
+// Animation variants for flipping bottom element.
 export const flipBottomVariants: Variants = {
   initial: {
     transformOrigin: "top",
@@ -60,4 +63,5 @@ export const flipBottomVariants: Variants = {
   },
 };
 
+// The calculated end date.
 export const END_DATE = getEndDate();

@@ -4,10 +4,12 @@ import React from "react";
 
 type Props = {};
 
+// Footer component displaying social media links.
 export default function Footer({}: Props) {
   return (
     <footer className="py-12">
       <ul className="flex items-center justify-center gap-8">
+        {/* Map over the social array and create a list item for each social media link */}
         {social.map((item, index) => (
           <li key={index}>
             <Link

@@ -4,6 +4,7 @@ import { useCountdown } from "../hooks/useCountDown";
 import { END_DATE } from "@/content/data";
 import CountCard from "./CountCard";
 
+// Countdown component that uses the useCountdown hook to display the countdown timer.
 export function Countdown() {
   const { days, hours, minutes, seconds } = useCountdown(END_DATE);
 

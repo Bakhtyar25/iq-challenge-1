@@ -1,16 +1,20 @@
 import React, { memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { flipBottomVariants, flipTopVariants } from "@/content/data";
+
 type Props = {
   time: number;
   label: string;
 };
 
+// Memoized CountCard component to optimize rendering.
 export default memo(function CountCard({ time, label }: Props) {
   return (
     <div className="flex flex-col items-center gap-3 md:gap-6">
       <div className="relative isolate flex h-timer w-timer flex-col rounded-sm shadow-timer md:h-timer-lg md:w-timer-lg md:rounded-md md:shadow-timer-lg">
+        {/* AnimatePresence component to handle animations when components are added/removed */}
         <AnimatePresence initial={false}>
+          {/* Top half flip animation */}
           <motion.div
             key={crypto.randomUUID()}
             variants={flipTopVariants}
@@ -23,6 +27,7 @@ export default memo(function CountCard({ time, label }: Props) {
               {time.toString().padStart(2, "0")}
             </span>
           </motion.div>
+          {/* Bottom half flip animation */}
           <motion.div
             key={crypto.randomUUID()}
             variants={flipBottomVariants}
@@ -36,7 +41,7 @@ export default memo(function CountCard({ time, label }: Props) {
             </span>
           </motion.div>
         </AnimatePresence>
-        <span className="w-[calc(100%-8px) absolute left-[6px] top-2/4 z-20 h-[1px] -translate-y-2/4 bg-indigo-800/40 md:w-[calc(100%-12px)]" />
+        <span className="w-[calc(100%-8px)] absolute left-[6px] top-2/4 z-20 h-[1px] -translate-y-2/4 bg-indigo-800/40 md:w-[calc(100%-12px)]" />
       </div>
       <span className="text-[0.5rem] font-bold uppercase tracking-[0.3em] text-indigo-400 md:text-sm">
         {label}
