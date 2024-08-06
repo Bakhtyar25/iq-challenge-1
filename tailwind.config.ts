@@ -13,6 +13,13 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        GrayishBlue: "hsl(237, 18%, 59%)",
+        SoftRed: "hsl(345, 95%, 68%)",
+        DarkDesaturatedBlue: "hsl(236, 21%, 26%)",
+        DarkBlue: "hsl(235, 16%, 14%)",
+        VeryDarkBlue: "hsl(234, 17%, 12%)",
+      },
     },
   },
   plugins: [],
