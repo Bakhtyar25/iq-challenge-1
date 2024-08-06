@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .animate-flip {
+      animation: flip 1s ease-in-out;
+    }
+  }
+
+.StarBG {
+  background-image: url("/public/images/bg-stars.svg");
+}
